@@ -26,7 +26,7 @@ COPY Plugins/Grand.Plugin.Widgets.Slider/Grand.Plugin.Widgets.Slider.csproj Plug
 
 # Copy everything else and build
 COPY . ./
-RUN dotnet publish Grand.Web -c Release -o out
+RUN dotnet publish Grand.Web -c Release -o out -r win-x64
 RUN dotnet build Plugins/Grand.Plugin.DiscountRequirements.Standard
 RUN dotnet build Plugins/Grand.Plugin.ExchangeRate.McExchange
 RUN dotnet build Plugins/Grand.Plugin.ExternalAuth.Facebook
