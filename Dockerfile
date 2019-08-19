@@ -44,10 +44,10 @@ RUN dotnet build Plugins/Grand.Plugin.Widgets.GoogleAnalytics
 RUN dotnet build Plugins/Grand.Plugin.Widgets.Slider
 
 # Build runtime image
-FROM microsoft/dotnet:2.2-aspnetcore-runtime 
-RUN apt-get update && \
-  apt-get -y install libgdiplus
-RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
+#FROM microsoft/dotnet:2.2-aspnetcore-runtime 
+#RUN apt-get update && \
+#  apt-get -y install libgdiplus
+#RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
 
 WORKDIR /app
 COPY --from=build-env /app/Grand.Web/out/ .
