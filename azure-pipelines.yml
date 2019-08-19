@@ -7,11 +7,11 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
-  buildPlatform: 'linux-x64'
+  buildPlatform: 'win-x64'
   buildConfiguration: 'Release'
 
 steps:
